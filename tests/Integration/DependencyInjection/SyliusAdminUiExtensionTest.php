@@ -45,7 +45,7 @@ final class SyliusAdminUiExtensionTest extends AbstractExtensionTestCase
         $this->assertContainerBuilderHasAlias(MenuBuilderInterface::class, 'sylius_admin_ui.knp.menu_builder');
     }
 
-    public function testItTwigHooksFactoryHookableMetadata(): void
+    public function testItRegistersTwigHooksFactoryHookableMetadata(): void
     {
         $this->load();
 
