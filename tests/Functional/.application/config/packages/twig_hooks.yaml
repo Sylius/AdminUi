@@ -1,0 +1,11 @@
+twig_hooks:
+    enable_autoprefixing: true
+    hook_name_section_separator: '#'
+    hooks:
+        'sylius_admin.book.index':
+            title:
+                template: 'book/index/title.html.twig'
+            description:
+                template: 'book/index/description.html.twig'
+            list:
+                template: 'book/index/list.html.twig'
