@@ -9,7 +9,7 @@
 
 {% block title %}{{ header|trans }} {{ parent() }}{% endblock %}
 
-{% block content %}
+{% block body %}
     {% hook 'index' with { _prefixes: prefixes, metadata, resources } %}
 {% endblock %}
 
