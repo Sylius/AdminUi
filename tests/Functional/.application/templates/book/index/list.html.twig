@@ -1,0 +1,5 @@
+<ul>
+    {% for book in hookable_metadata.context.resources %}
+        <li data-test-book-name-{{ book.id }}>{{ book.name }}</li>
+    {% endfor %}
+</ul>
