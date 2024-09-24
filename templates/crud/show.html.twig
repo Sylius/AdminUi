@@ -5,20 +5,20 @@
     'sylius_admin.common'
 ] %}
 
-{% set header = configuration.vars.header|default(metadata.applicationName~'.ui.'~metadata.pluralName) %}
+{% set header = metadata.applicationName ~ '.ui.' ~ metadata.pluralName %}
 
 {% block title %}{{ header|trans }} | {{ parent() }}{% endblock %}
 
 {% block body %}
-    {% hook 'update' with { _prefixes: prefixes, resource, metadata, configuration, form } %}
+    {% hook 'show' with { _prefixes: prefixes, resource, metadata, configuration } %}
 {% endblock %}
 
 {% block stylesheets %}
     {{ parent() }}
-    {% hook 'update#stylesheets' with { _prefixes: prefixes } %}
+    {% hook 'show#stylesheets' with { _prefixes: prefixes } %}
 {% endblock %}
 
 {% block javascripts %}
     {{ parent() }}
-    {% hook 'update#javascripts' with { _prefixes: prefixes } %}
+    {% hook 'show#javascripts' with { _prefixes: prefixes } %}
 {% endblock %}
