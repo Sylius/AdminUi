@@ -5,7 +5,7 @@
     'sylius_admin.common'
 ] %}
 
-{% set header = configuration.vars.header|default(metadata.applicationName~'.ui.'~metadata.pluralName) %}
+{% set header = metadata.applicationName ~ '.ui.' ~ metadata.pluralName %}
 
 {% block title %}{{ header|trans }} | {{ parent() }}{% endblock %}
 
