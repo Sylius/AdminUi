@@ -5,9 +5,9 @@
     'sylius_admin.common'
 ] %}
 
-{% set header = configuration.vars.header|default(metadata.applicationName~'.ui.'~metadata.pluralName) %}
+{% set header = custom_header|default(metadata.applicationName ~ '.ui.' ~ metadata.pluralName) %}
 
-{% block title %}{{ header|trans }} {{ parent() }}{% endblock %}
+{% block title %}{{ header|trans }} | {{ parent() }}{% endblock %}
 
 {% block body %}
     {% hook 'index' with { _prefixes: prefixes, metadata, resources } %}
