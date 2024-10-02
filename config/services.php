@@ -18,6 +18,8 @@ use Sylius\AdminUi\Knp\Menu\MenuBuilderInterface;
 use Sylius\AdminUi\TwigHooks\Hookable\Metadata\RoutingHookableMetadataFactory;
 
 return function (ContainerConfigurator $configurator): void {
+    $configurator->import('./services/**/**.php');
+
     $services = $configurator->services();
 
     $services->set('sylius_admin_ui.knp.menu_builder', MenuBuilder::class)

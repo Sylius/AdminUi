@@ -6,6 +6,8 @@
         "knplabs/knp-menu-bundle": "^3.0",
         "sylius/twig-hooks": "^0.3 || dev-main",
         "symfony/http-kernel": "^6.4 || ^7.0",
+        "symfony/security-bundle": "^6.4 || ^7.0",
+        "symfony/security-http": "^6.4 || ^7.0",
         "symfony/twig-bundle": "^6.4 || ^7.0",
         "sylius/resource-bundle": "^1.11 || ^1.12@alpha",
         "twig/twig": "^2.15 || ^3.0"
