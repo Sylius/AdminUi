@@ -13,6 +13,7 @@ declare(strict_types=1);
 
 namespace Symfony\Component\DependencyInjection\Loader\Configurator;
 
+use Symfony\Bundle\FrameworkBundle\Controller\TemplateController;
 use Symfony\Component\Routing\Loader\Configurator\RoutingConfigurator;
 
 return function (RoutingConfigurator $routes): void {
@@ -22,5 +23,13 @@ return function (RoutingConfigurator $routes): void {
 
     $routes->add('sylius_admin_ui_login_check', '/login_check');
     $routes->add('sylius_admin_ui_logout', '/logout')
-        ->methods(['GET']);
+        ->methods(['GET'])
+    ;
+
+    $routes->add('sylius_admin_ui_dashboard', '/')
+        ->controller(TemplateController::class)
+        ->defaults([
+            'template' => '@SyliusAdminUi/dashboard/index.html.twig',
+        ])
+    ;
 };
