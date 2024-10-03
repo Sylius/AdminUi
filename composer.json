@@ -45,6 +45,9 @@
     "extra": {
         "symfony": {
             "require": "7.0.*"
+        },
+        "branch-alias": {
+            "dev-main": "0.4-dev"
         }
     },
     "config": {
