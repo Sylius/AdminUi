@@ -44,7 +44,10 @@
     ],
     "extra": {
         "symfony": {
-            "require": "7.0.*"
+            "require": "7.1.*"
+        },
+        "branch-alias": {
+            "dev-main": "0.4-dev"
         }
     },
     "config": {
