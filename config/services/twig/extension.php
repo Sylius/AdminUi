@@ -18,7 +18,7 @@ use Sylius\AdminUi\Twig\Extension\RedirectPathExtension;
 return function (ContainerConfigurator $configurator): void {
     $services = $configurator->services();
 
-    $services->set('sylius_twig_extra.twig.extension.redirect_path', RedirectPathExtension::class)
+    $services->set('sylius_admin_ui.twig.extension.redirect_path', RedirectPathExtension::class)
         ->args([
             service('router'),
             service('sylius.grid.filter_storage')->nullOnInvalid(),
