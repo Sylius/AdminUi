@@ -19,4 +19,6 @@ return [
     Sylius\TwigHooks\SyliusTwigHooksBundle::class => ['all' => true],
     Sylius\Bundle\ResourceBundle\SyliusResourceBundle::class => ['all' => true],
     Sylius\AdminUi\Symfony\SyliusAdminUiBundle::class => ['all' => true],
+    Sylius\Bundle\GridBundle\SyliusGridBundle::class => ['all' => true],
+    Doctrine\Bundle\DoctrineBundle\DoctrineBundle::class => ['all' => true],
 ];
