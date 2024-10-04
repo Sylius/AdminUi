@@ -29,7 +29,7 @@ return function (ContainerConfigurator $configurator): void {
     $services->alias(MenuBuilderInterface::class, 'sylius_admin_ui.knp.menu_builder');
 
     $services->set('sylius_admin_ui.twig_hooks.factory.hookable_metadata', RoutingHookableMetadataFactory::class)
-        ->decorate('twig_hooks.factory.hookable_metadata')
+        ->decorate('sylius_twig_hooks.factory.hookable_metadata')
         ->args([
             service('.inner'),
             param('sylius_admin_ui.routing'),
