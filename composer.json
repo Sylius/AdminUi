@@ -1,5 +1,6 @@
 {
     "name": "sylius/admin-ui",
+    "description": "Minimalist generic templates for your admin panels",
     "type": "library",
     "require": {
         "php": "^8.1",
@@ -23,6 +24,9 @@
         "symfony/framework-bundle": "^6.4 || ^7.0",
         "symfony/runtime": "^6.4 || ^7.0",
         "symfony/yaml": "^6.4 || ^7.0"
+    },
+    "suggest": {
+        "sylius/bootstrap-admin-ui": "^0.4"
     },
     "autoload": {
         "psr-4": {
