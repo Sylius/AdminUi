@@ -10,12 +10,15 @@
         "symfony/security-bundle": "^6.4 || ^7.0",
         "symfony/security-http": "^6.4 || ^7.0",
         "symfony/twig-bundle": "^6.4 || ^7.0",
-        "sylius/resource-bundle": "^1.11 || ^1.12@alpha",
+        "sylius/resource-bundle": "^1.11 || ^1.12@beta",
         "twig/twig": "^2.15 || ^3.0"
     },
     "require-dev": {
+        "doctrine/doctrine-bundle": "^2.12",
+        "doctrine/orm": "^2.0",
         "matthiasnoback/symfony-dependency-injection-test": "^5.1",
         "phpunit/phpunit": "^9.6",
+        "sylius/grid-bundle": "^1.13@beta",
         "symfony/browser-kit": "^6.4 || ^7.0",
         "symfony/config": "^6.4 || ^7.0",
         "symfony/console": "^6.4 || ^7.0",
