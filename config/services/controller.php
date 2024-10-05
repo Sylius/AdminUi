@@ -26,4 +26,5 @@ return function (ContainerConfigurator $configurator): void {
             service('twig'),
         ])
     ;
+    $services->alias(LoginController::class, 'sylius_admin_ui.controller.login');
 };
