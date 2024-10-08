@@ -5,7 +5,7 @@
     "require": {
         "php": "^8.1",
         "knplabs/knp-menu-bundle": "^3.0",
-        "sylius/twig-hooks": "^0.4.1",
+        "sylius/twig-hooks": "^0.5",
         "symfony/http-kernel": "^6.4 || ^7.0",
         "symfony/security-bundle": "^6.4 || ^7.0",
         "symfony/security-http": "^6.4 || ^7.0",
@@ -29,7 +29,7 @@
         "symfony/yaml": "^6.4 || ^7.0"
     },
     "suggest": {
-        "sylius/bootstrap-admin-ui": "^0.4"
+        "sylius/bootstrap-admin-ui": "^0.5"
     },
     "autoload": {
         "psr-4": {
@@ -54,7 +54,7 @@
             "require": "7.1.*"
         },
         "branch-alias": {
-            "dev-main": "0.x-dev"
+            "dev-main": "0.5-dev"
         }
     },
     "config": {
