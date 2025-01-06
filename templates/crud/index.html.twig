@@ -5,9 +5,12 @@
     'sylius_admin.common'
 ] %}
 
-{% set header = custom_header|default(metadata.applicationName ~ '.ui.' ~ metadata.pluralName) %}
-
-{% block title %}{{ header|trans }} | {{ parent() }}{% endblock %}
+{% block title %}
+    {% apply striptags %}
+        {% set parent = parent() %}
+        {% hook 'index#title' with { _prefixes: prefixes } %}
+    {% endapply %}
+{% endblock %}
 
 {% block body %}
     {% hook 'index' with { _prefixes: prefixes, metadata, resources } %}
