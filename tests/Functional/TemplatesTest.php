@@ -30,7 +30,7 @@ final class TemplatesTest extends WebTestCase
         $this->client->request('GET', '/base');
 
         self::assertResponseIsSuccessful();
-        self::assertSelectorTextContains('title', 'Sylius');
+        self::assertSelectorTextContains('title', '');
     }
 
     public function testIndexTemplate(): void

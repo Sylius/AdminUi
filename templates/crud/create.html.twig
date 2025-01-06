@@ -5,9 +5,12 @@
     'sylius_admin.common'
 ] %}
 
-{% set header = metadata.applicationName ~ '.ui.' ~ metadata.pluralName %}
-
-{% block title %}{{ header|trans }} | {{ parent() }}{% endblock %}
+{% block title %}
+    {% apply striptags %}
+        {% set parent = parent() %}
+        {% hook 'create#title' with { _prefixes: prefixes } %}
+    {% endapply %}
+{% endblock %}
 
 {% block body %}
     {% hook 'create' with { _prefixes: prefixes, resource, metadata, configuration, form } %}
