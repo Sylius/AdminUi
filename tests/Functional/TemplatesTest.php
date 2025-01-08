@@ -40,7 +40,7 @@ final class TemplatesTest extends WebTestCase
         self::assertResponseIsSuccessful();
         self::assertSelectorTextContains('[data-test-title]', 'Books');
         self::assertSelectorTextContains('[data-test-description]', 'List of books');
-        self::assertSelectorTextContains('[data-test-book-name-shinning]', 'Shinning');
+        self::assertSelectorTextContains('[data-test-book-name-the-shining]', 'The Shining');
         self::assertSelectorTextContains('[data-test-book-name-carrie]', 'Carrie');
     }
 
@@ -53,7 +53,7 @@ final class TemplatesTest extends WebTestCase
 
     public function testUpdateTemplate(): void
     {
-        $this->client->request('GET', '/books/shinning/edit');
+        $this->client->request('GET', '/books/the-shining/edit');
 
         self::assertResponseIsSuccessful();
     }

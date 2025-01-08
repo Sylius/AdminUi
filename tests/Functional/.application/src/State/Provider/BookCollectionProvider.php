@@ -23,7 +23,7 @@ class BookCollectionProvider implements ProviderInterface
     public function provide(Operation $operation, Context $context): array
     {
         return [
-            new BookResource('shinning', 'Shinning'),
+            new BookResource('the-shining', 'The Shining'),
             new BookResource('carrie', 'Carrie'),
         ];
     }
