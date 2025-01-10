@@ -1,5 +1,4 @@
 {% set generic_hook = 'sylius_admin.base' %}
-{% set prefixes = prefixes|default([])|merge([generic_hook]) %}
 
 <!DOCTYPE html>
 <html lang="{{ app.request.locale }}">
@@ -8,11 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <title>{% block title %}{% apply striptags %}{% hook '#base_title' with { _prefixes: prefixes } %}{% endapply %}{% endblock %}</title>
+    <title>{% block title %}{% apply striptags %}{% hook generic_hook ~ '#base_title' %}{% endapply %}{% endblock %}</title>
 
     {% block metatags %}{% endblock %}
     {% block stylesheets %}
-        {% hook '#stylesheets' with { _prefixes: prefixes } %}
+        {% hook generic_hook ~ '#stylesheets' %}
     {% endblock %}
 </head>
 <body class="{% block body_class %}{% endblock %}">
@@ -21,7 +20,7 @@
 </div>
 
 {% block javascripts %}
-    {% hook '#javascripts' with { _prefixes: prefixes } %}
+    {% hook generic_hook ~ '#javascripts' %}
 {% endblock %}
 </body>
 </html>
